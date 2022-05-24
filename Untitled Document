@@ -1,0 +1,38 @@
+INSERT INTO mdl_question_response_analysis (hashcode, whichtries, timemodified, questionid, variant, subqid,aid,response,credit)
+VALUES ('b441fd04c486a59f671bc8ce193be3acf87e8aed','lasttry','1486565386','11', '1', '11', '30', 'Traveling everyday on the tram', '0.00000');
+
+
+
+
+
+DROP PROCEDURE IF EXISTS addQ11;
+DELIMITER //  
+CREATE PROCEDURE addQ11()   
+BEGIN
+DECLARE i INT DEFAULT 1; 
+WHILE (i <= 12) DO
+    INSERT INTO mdl_question_response_analysis (hashcode, whichtries, timemodified, questionid, variant, subqid,aid,response,credit)
+VALUES ('b441fd04c486a59f671bc8ce193be3acf87e8aed','lasttry','1486565386','11', '1', '11', '33', 'Traveling everyday on the tram', '0.00000');
+    SET i = i+1;
+END WHILE;
+END;
+//  
+DELIMITER ;
+
+
+CALL addQ11;
+
+
+DELETE FROM mdl_question_response_analysis WHERE id > 188;
+
+
+
+
+
+
+
+
+
+
+
+
